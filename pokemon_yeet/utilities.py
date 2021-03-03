@@ -18,7 +18,7 @@ def setup_game():
         print(f"Creating cache directory '{cache_directory.resolve()}'...")
         cache_directory.mkdir()
 
-    for i in range(pokedex_number_start, pokedex_number_end):
+    for i in range(pokedex_number_start, pokedex_number_end + 1):
         pokemon_json_file = cache_directory / f"{i}.json"
 
         if pokemon_json_file.is_file():
