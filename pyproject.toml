@@ -1,0 +1,16 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "pokemon_yeet"
+author = "Aaron Brooks"
+author-email = "abrooks@mastermnd.io"
+home-page = "https://github.com/mastermndio/pokemon_yeet"
+description-file = "README.md"
+requires = [
+    "requests >= 2.25.1",
+]
+
+[tool.flit.scripts]
+pokemon-yeet = "pokemon_yeet.pokemon:main"

@@ -1,6 +1,6 @@
 import random
 import time
-from utilities import setup_game, load_pokemon
+from .utilities import setup_game, load_pokemon
 
 # POKEMON: YEET
 # Class that defines a pokemon
@@ -117,5 +117,12 @@ def gameLogic():
     else:
         print("WE LOST BECAUSE WE ARE LOSERS")
 
-setup_game()
-gameLogic()
+
+def main() -> None:
+    "runs the game"
+    setup_game()
+    gameLogic()
+
+
+if __name__ == "__main__":
+    main()
