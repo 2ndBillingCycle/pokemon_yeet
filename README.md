@@ -38,61 +38,75 @@ pip install --user --upgrade pip
 
 ## Play
 
-With the game [installed](#install), run the command `pokemon` to play:
+With the game [installed](#install), run the command `pokemon-yeet` to play:
 
 ```
-$ pokemon
-Creating pokemon directory...
-Importing Pokemon....
+$ pokemon-yeet
 ...
-
-Game is Setup and Ready to begin
+Downloading pokemon #151
+Pokemon data downloaded
 get ready, now recruiting your team of pokemon!
 
 
 team selected! meet your new team
-victreebel: HP: 80 TYPE: grass
-mr-mime: HP: 40 TYPE: psychic
-clefable: HP: 95 TYPE: fairy
+omastar: HP: 70 TYPE: rock
+nidoking: HP: 81 TYPE: poison
+tentacool: HP: 40 TYPE: water
 
 
 now recruiting the enemy team!
 
 
 team selected! meet your enemies!
-doduo: HP: 35 TYPE: normal
-nidorina: HP: 70 TYPE: poison
-krabby: HP: 30 TYPE: water
+kakuna: HP: 45 TYPE: bug
+nidorino: HP: 61 TYPE: poison
+venomoth: HP: 70 TYPE: bug
 PREPARE TO FIGHT!!!!!
-victreebel attacked with scratch and it did 35 damage
-doduo: HP: 0 TYPE: normal
-doduo has FAINTED
-doduo: HP: 0 TYPE: normal
+omastar attacked with scratch and it did 35 damage
+kakuna: HP: 10 TYPE: bug
+kakuna attacked with leer and it did 20 damage
+omastar: HP: 50 TYPE: rock
+omastar attacked with tackle and it did 10 damage
+kakuna: HP: 0 TYPE: bug
+kakuna has FAINTED
+kakuna: HP: 0 TYPE: bug
 THE SCORE IS: ME:1 ENEMY:0
-mr-mime attacked with scratch and it did 35 damage
-nidorina: HP: 35 TYPE: poison
-nidorina attacked with scratch and it did 35 damage
-mr-mime: HP: 5 TYPE: psychic
-mr-mime attacked with leer and it did 20 damage
-nidorina: HP: 15 TYPE: poison
-nidorina attacked with cut and it did 25 damage
-mr-mime: HP: -20 TYPE: psychic
-mr-mime has FAINTED
-mr-mime: HP: -20 TYPE: psychic
-THE SCORE IS: ME:1 ENEMY:1
-clefable attacked with cut and it did 25 damage
-krabby: HP: 5 TYPE: water
-krabby attacked with scratch and it did 35 damage
-clefable: HP: 60 TYPE: fairy
-clefable attacked with cut and it did 25 damage
-krabby: HP: -20 TYPE: water
-krabby has FAINTED
-krabby: HP: -20 TYPE: water
+nidoking attacked with cut and it did 25 damage
+nidorino: HP: 36 TYPE: poison
+nidorino attacked with cut and it did 25 damage
+nidoking: HP: 56 TYPE: poison
+nidoking attacked with tackle and it did 10 damage
+nidorino: HP: 26 TYPE: poison
+nidorino attacked with leer and it did 20 damage
+nidoking: HP: 36 TYPE: poison
+nidoking attacked with cut and it did 25 damage
+nidorino: HP: 1 TYPE: poison
+nidorino attacked with tackle and it did 10 damage
+nidoking: HP: 26 TYPE: poison
+nidoking attacked with leer and it did 20 damage
+nidorino: HP: -19 TYPE: poison
+nidorino has FAINTED
+nidorino: HP: -19 TYPE: poison
+THE SCORE IS: ME:2 ENEMY:0
+tentacool attacked with tackle and it did 10 damage
+venomoth: HP: 60 TYPE: bug
+venomoth attacked with cut and it did 25 damage
+tentacool: HP: 15 TYPE: water
+tentacool attacked with leer and it did 20 damage
+venomoth: HP: 40 TYPE: bug
+venomoth attacked with tackle and it did 10 damage
+tentacool: HP: 5 TYPE: water
+tentacool attacked with leer and it did 20 damage
+venomoth: HP: 20 TYPE: bug
+venomoth attacked with leer and it did 20 damage
+tentacool: HP: -15 TYPE: water
+tentacool has FAINTED
+tentacool: HP: -15 TYPE: water
 THE SCORE IS: ME:2 ENEMY:1
 WE WON HAHAHAHAHAHAHAHAHAHAHAHA
 ```
 
-_note: running `pokemon` will create a directory called `pokemon/` to store information about Pokémon_
+_note: running `pokemon-yeet` will create a directory to store information about Pokémon_
 
 ## Development
 
