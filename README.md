@@ -1,15 +1,21 @@
 # Pokemon YEET
 
-This is an auto battling pokemon cli game.
+An auto battling Pokémon cli game.
+
+This game was created as part of the [2021 MASTERMND deCoded Journey sofware bootcamp][decoded 2021]:
+
+1. [creating a Pokemon class (starts at 1:24:48)][part 1]
+1. [making it into a game][part 2]
+1. [using an API][part 3]
 
 ## Install
 
 This game is built with [Python][], which has [installation instructions here][python-installation].
 
-The game can be downloaded with `pip`:
+Download the game with `pip`:
 
 ```sh
-pip install --user -U "git+https://github.com/2ndBillingCycle/pokemon_yeet"
+pip install --user -U pokemon-yeet-2ndbillingcycle
 ```
 
 ### Installation error
@@ -32,7 +38,7 @@ pip install --user --upgrade pip
 
 ## Play
 
-With the game [installed](#install), run the `pokemon` command to play:
+With the game [installed](#install), run the command `pokemon` to play:
 
 ```
 $ pokemon
@@ -98,7 +104,9 @@ python -m venv venv
 
 _note: depending on how [Python][] was installed, `python` may be `python3`, and `venv` may need to be downloaded separately (e.g. as `python3-venv`)_
 
-This creates a directory called `venv` in the current directory. Then, activate the virtual environment. On Linux, this looks like:
+This creates a directory called `venv` in the current directory.
+
+Then, activate the virtual environment. On Linux, this looks like:
 
 ```sh
 . venv/bin/activate
@@ -110,7 +118,7 @@ Make sure `pip` inside the virtual environment is up to date:
 pip install --upgrade pip
 ```
 
-Then, the game can be installed in the virtual environment:
+Then, install the game in the virtual environment:
 
 ```sh
 pip install ./
@@ -118,14 +126,41 @@ pip install ./
 
 And you're ready to go! Change some files, re-install, and run again!
 
-The installation is managed by [Flit][].
+### Packaging
+
+[Flit][] is used to package and upload the game.
+
+To upload your own version, change the information in [`pyproject.toml`][flit pyproject.toml]:
+
+- `dist-name`: replace `2ndbillingcycle` with your username
+- `author`: your name
+- `author-email`: your email
+- `home-page`: either put the link to your GitHub fork, or remove this line
+
+Then, install [Flit][] and build the distribution files. With the virtual environment activated:
+
+```sh
+pip install --upgrade flit
+python -m flit build
+```
+
+Then, follow [the official Python packaging guide][python packaging tutorial] for uploading the package to the [Test Python Package Index][testpypi].
+
+Alternatively, you can [create an API token on PyPI with a scope for "Entire account"][api token], and run `flit publish`, pasting the created API token for the password.
 
 ### API dependencies
 
-This project uses <https://pokeapi.co/> to get information about Pokémon.
+This game uses <https://pokeapi.co/> to get information about Pokémon.
 
 [python]: <https://www.python.org/>
 [python-installation]: <https://realpython.com/installing-python/> "RealPython's guide to installing Python on Windows, MacOS, and Linux"
 [`git`]: <https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository> "brief guide on using git"
 [python-venv]: <https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments> "tutorial on creating virtual environments in Python"
 [flit]: <https://flit.readthedocs.io/> "Documentation for Flit"
+[decoded 2021]: <https://courses.mastermnd.io/72579a892507473ab4681876f8299977> "2021 deCoded Journey"
+[part 1]: <https://www.twitch.tv/videos/917000567> "Part 1 on Twitch"
+[part 2]: <https://www.twitch.tv/videos/919551146> "Part 2 on Twitch"
+[part 3]: <https://www.twitch.tv/videos/934768927> "Part 3 on Twitch"
+[python packaging tutorial]: <https://packaging.python.org/tutorials/packaging-projects/#uploading-the-distribution-archives>
+[testpypi]: <https://test.pypi.org/> "The Test Python Package Index"
+[test api token]: <https://pypi.org/help/#apitoken>

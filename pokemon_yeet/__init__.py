@@ -1,4 +1,4 @@
 """
-This is an auto battling pokemon cli game
+An auto battling Pokémon cli game
 """
 __version__ = "0.0.4"
