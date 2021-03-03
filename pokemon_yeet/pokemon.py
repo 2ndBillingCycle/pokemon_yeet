@@ -4,6 +4,8 @@ main file
 import random
 import time
 from .utilities import setup_game, load_pokemon
+from .constants import pokedex_number_start, pokedex_number_end
+
 
 class Pokemon:
     "defines a pokemon"
@@ -60,7 +62,7 @@ class Lineup:
     def recruit(self):
         "add random pokemon until the lineup is full"
         for i in range(0,3):
-            rand_pokemon = random.randint(1,152)
+            rand_pokemon = random.randint(pokedex_number_start, pokedex_number_end)
             poke_name, poke_type, poke_hp = load_pokemon(rand_pokemon)
             pokemon_to_add = Pokemon(poke_name, poke_type, poke_hp)
             self.members.append(pokemon_to_add)
