@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install flit
-        run: python -m pip install --user --ugrade flit
+        run: python -m pip install --user --upgrade flit
 
       - name: Publish to PyPI
         env:
