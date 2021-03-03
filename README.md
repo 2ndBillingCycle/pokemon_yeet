@@ -187,5 +187,6 @@ This game uses <https://pokeapi.co/> to get information about Pokémon.
 [part 3]: <https://www.twitch.tv/videos/934768927> "Part 3 on Twitch"
 [python packaging tutorial]: <https://packaging.python.org/tutorials/packaging-projects/#uploading-the-distribution-archives>
 [testpypi]: <https://test.pypi.org/> "The Test Python Package Index"
-[test api token]: <https://pypi.org/help/#apitoken>
+[api token]: <https://pypi.org/help/#apitoken>
 [semver explanation]: <https://www.geeksforgeeks.org/introduction-semantic-versioning/> "Explanation of SemVer on Geeks for Geeks"
+[flit pyproject.toml]: <https://flit.readthedocs.io/en/latest/pyproject_toml.html#metadata-section> "description of the metadata flit uses from pyproject.toml"
