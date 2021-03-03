@@ -23,6 +23,5 @@ jobs:
       - name: Publish to PyPI
         env:
           FLIT_USERNAME: "__token__"
-          FLIT_PASSWORD: "${{ secrets.TEST_PYPI_API_TOKEN }}"
-          FLIT_INDEX_URL: "https://test.pypi.org/legacy/"
+          FLIT_PASSWORD: "${{ secrets.PYPI_API_TOKEN }}"
         run: python -m flit publish
