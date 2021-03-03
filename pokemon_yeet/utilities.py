@@ -1,8 +1,14 @@
+"""
+utility functions
+
+caches pokemon data
+"""
 import requests
 import json
 import os
 
 def setup_game():
+    "download pokemon data"
     if os.path.isdir('./pokemon') == False:
         print("Creating pokemon directory...")
         os.mkdir('./pokemon')
@@ -24,6 +30,7 @@ def setup_game():
 
 
 def load_pokemon(pokemon):
+    "return the information for one pokemon"
     with open(f'./pokemon/{pokemon}.json') as f:
         data = json.load(f)
 

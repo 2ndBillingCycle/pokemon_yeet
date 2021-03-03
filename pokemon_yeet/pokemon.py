@@ -1,11 +1,14 @@
+"""
+main file
+"""
 import random
 import time
 from .utilities import setup_game, load_pokemon
 
-# POKEMON: YEET
-# Class that defines a pokemon
 class Pokemon:
+    "defines a pokemon"
     def __init__(self, name, type, hp = 100):
+        "creates a pokemon with all of its attributes"
         self.name = name
         self.type = type
         self.attacks = {"tackle": 10, "leer": 20, "cut": 25, "scratch": 35}
@@ -13,16 +16,17 @@ class Pokemon:
         #self.weakness = weakness
         #self.status = "awake"
 
-    # print print hp
     def get_status(self):
+        "print hp"
         print(f"{self.name}: HP: {self.hp} TYPE: {self.type}")
 
-    # print move list
     def get_attacks(self):
+        "print move list"
         for k, v in self.attacks.items():
             print(k,v)
 
     def run_attack(self):
+        "perform attack and calculate damage"
         attack = random.choice(list(self.attacks.keys()))
         damage = self.attacks[attack]
         print(f"{self.name} attacked with {attack} and it did {damage} damage")
@@ -31,24 +35,30 @@ class Pokemon:
         return damage
     
     def receive_attack(self, damage):
+        "subtract damage and print status"
         self.hp -= damage
         self.get_status()
 
 class Lineup:
+    "a party or team of Pokemon"
     def __init__(self):
+        "create an empty lineup"
         self.members = []
 
     def add_member(self, pokemon):
+        "add a pokemon to the lineup"
         if len(self.members) < 3:
             self.members.append(pokemon)
         else:
             print("Sorry Team Already Full")
 
     def show_lineup(self):
+        "print status of each member in the lineup"
         for i in self.members:
             i.get_status()
         
     def recruit(self):
+        "add random pokemon until the lineup is full"
         for i in range(0,3):
             rand_pokemon = random.randint(1,152)
             poke_name, poke_type, poke_hp = load_pokemon(rand_pokemon)
@@ -61,6 +71,7 @@ class Lineup:
 
 
 def gameLogic():
+    "run an entire battle, from recruitment to success"
     print("get ready, now recruiting your team of pokemon!")
     our_team = Lineup().recruit()
     time.sleep(1.5)
