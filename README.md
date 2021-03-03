@@ -4,12 +4,30 @@ This is an auto battling pokemon cli game.
 
 ## Install
 
-This game is built with [Python][]. There are [installation instructions here][python-installation].
+This game is built with [Python][], which has [installation instructions here][python-installation].
 
 The game can be downloaded with `pip`:
 
 ```sh
-python -m pip install --user --upgrade pokemon-yeet
+pip install --user -U "git+https://github.com/2ndBillingCycle/pokemon_yeet"
+```
+
+### Installation error
+
+If `pip` returns an error like the following:
+
+```
+...
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pip-req-build-h6qzslht/setup.py'
+
+----------------------------------------
+Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-req-build-h6qzslht/
+```
+
+`pip` is out of date, and needs to be updated:
+
+```sh
+pip install --user --upgrade pip
 ```
 
 ## Play
