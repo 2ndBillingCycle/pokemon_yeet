@@ -11,6 +11,7 @@ home-page = "https://github.com/2ndbillingcycle/pokemon_yeet"
 description-file = "README.md"
 requires = [
     "requests >= 2.25.1",
+    "appdirs >= 1.4.4",
 ]
 classifiers = [
     "Programming Language :: Python :: 3 :: Only",

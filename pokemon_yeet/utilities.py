@@ -6,17 +6,26 @@ caches pokemon data
 import requests
 import pathlib
 import json
+import appdirs
 from requests.exceptions import ConnectionError
 from json.decoder import JSONDecodeError
 from .constants import pokedex_number_start, pokedex_number_end
+from . import __version__
 
-cache_directory = pathlib.Path("./pokemon")
+cache_directory = pathlib.Path(
+    appdirs.user_cache_dir(
+        appname="pokemon-yeet",
+        appauthor=False,
+        version=__version__,
+    )
+)
+
 
 def setup_game():
     "download pokemon data"
     if not cache_directory.is_dir():
         print(f"Creating cache directory '{cache_directory.resolve()}'...")
-        cache_directory.mkdir()
+        cache_directory.mkdir(parents=True)
 
     for i in range(pokedex_number_start, pokedex_number_end + 1):
         pokemon_json_file = cache_directory / f"{i}.json"
