@@ -39,7 +39,7 @@ def setup_game():
         error_message = f"cannot get pokemon #{i}"
         try:
             response = requests.get(f'https://pokeapi.co/api/v2/pokemon/{i}')
-        except:
+        except ConnectionError:
             print(error_message)
             continue
         finally:
