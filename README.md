@@ -151,6 +151,14 @@ To upload your own version, change the information in [`pyproject.toml`][flit py
 - `author-email`: your email
 - `home-page`: either put the link to your GitHub fork, or remove this line
 
+Also update the value of the string assigned to `__version__` in `pokemon_yeet/__init__.py`:
+
+```python
+__version__ = "0.0.1"
+```
+
+The format follows [Semantic Version][semver explanation], with the canonical specification living at <https://semver.org/>.
+
 Then, install [Flit][] and build the distribution files. With the virtual environment activated:
 
 ```sh
@@ -158,9 +166,11 @@ pip install --upgrade flit
 python -m flit build
 ```
 
-Then, follow [the official Python packaging guide][python packaging tutorial] for uploading the package to the [Test Python Package Index][testpypi].
+To be able to upload the distribution files, follow [the official Python packaging guide][python packaging tutorial] for uploading the package to the [Test Python Package Index][testpypi].
 
 Alternatively, you can [create an API token on PyPI with a scope for "Entire account"][api token], and run `flit publish`, pasting the created API token for the password.
+
+Because PyPI does not allow changes to the files for a specific version of a package, the `__version__` has to be updated before running `flit build`.
 
 ### API dependencies
 
@@ -178,3 +188,4 @@ This game uses <https://pokeapi.co/> to get information about Pokémon.
 [python packaging tutorial]: <https://packaging.python.org/tutorials/packaging-projects/#uploading-the-distribution-archives>
 [testpypi]: <https://test.pypi.org/> "The Test Python Package Index"
 [test api token]: <https://pypi.org/help/#apitoken>
+[semver explanation]: <https://www.geeksforgeeks.org/introduction-semantic-versioning/> "Explanation of SemVer on Geeks for Geeks"
