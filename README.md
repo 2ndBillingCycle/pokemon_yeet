@@ -123,7 +123,7 @@ This creates a directory called `venv` in the current directory.
 Then, activate the virtual environment. On Linux, this looks like:
 
 ```sh
-. venv/bin/activate
+. ./venv/bin/activate
 ```
 
 Make sure `pip` inside the virtual environment is up to date:
